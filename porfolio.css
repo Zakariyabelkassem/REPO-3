@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+
+header{
+    width: 100%;
+    height: 100vh;
+    
+}
+ 
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 1.5em 1em;
+    
+   
+}
+
+
+nav #logo{
+    cursor: pointer;
+    transition: 0.6s ease;
+  
+   
+    
+  
+}
+
+nav #logo:hover{
+    transform: scale(1.1);
+    letter-spacing: 0.1em;
+}
+
+
+
+
+nav ul li{
+    display: inline-block;
+    margin: 1em 1em;
+  
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: 1s ease;
+    color: black;
+}
+nav ul li a:hover{
+    transform: scale(1.05);
+    letter-spacing: 0.5rem;
+    margin-top: -0.6rem;
+    color: rgb(156, 96, 22);
+}
+
+
+
+.text{
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.text h1{
+
+    color: transparent;
+    -webkit-text-stroke: 2px bisque;
+    font-size: 200px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: text;
+    transition: 0.7s ease;
+    position:relative;
+    
+    animation: animat 3s 1;
+}
+@keyframes animat{
+    0%{
+        letter-spacing: 0.2em;
+        margin-bottom: -0.9em;
+    }
+    30%{
+        letter-spacing: 0.3;
+        margin-bottom: -1em;
+    }
+}
+
+.text h1:hover{
+    color:rgba(255, 228, 196, 0.281);
+    -webkit-text-stroke: 2px rgb(130, 130, 130);
+    transform: scale(1.1);
+}
+.text #btn{
+    padding: 0.5rem 3rem;
+    border-radius: 2em;
+    border-color: white;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+}
+
+.text #btn:hover{
+    border-color: transparent;
+    color: beige;
+}
+
+.back{
+ position: absolute;
+bottom: 0;
+right: 0;
+ z-index: -1;
+
+
+}
+
+@media (min-aspect-ratio:16/9){
+    .back{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio:16/9){
+    .back{
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (max-width:914px) and (min-width:608px){
+    .text h1{
+        font-size: 130px ;
+    }
+}
+
+@media (max-width:608px){
+    nav{
+        flex-direction: column;
+        width: 100%;
+
+    }
+    .text h1{
+        font-size: 100px;
+    }
+}
+
+@media (max-width:470px) {
+
+     
+nav{
+   flex-direction: column;
+    width: 100%;
+    
+   
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 1em 0.5em;
+  
+}
+
+
+    .text h1{
+        font-size: 75px ;
+    }
+}
